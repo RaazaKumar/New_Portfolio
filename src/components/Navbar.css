@@ -1,0 +1,14 @@
+.navbar-list {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-link {
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.navbar-link:hover, .navbar-link.active {
+  color: var(--primary-gold);
+}

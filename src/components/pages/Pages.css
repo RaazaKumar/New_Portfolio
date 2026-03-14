@@ -1,0 +1,127 @@
+/* Base Page Styles */
+.article {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.article-title {
+  color: var(--text-main);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+/* Magic underline for titles */
+.article-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 5px;
+  background: var(--primary-gold);
+  border-radius: 3px;
+}
+
+.about-text {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.service {
+  margin-bottom: 30px;
+}
+
+.service-title {
+  color: var(--text-main);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.service-item {
+  background: var(--bg-container-light);
+  border-radius: 14px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+  z-index: 1;
+}
+
+.service-icon-box {
+  margin-top: 5px;
+  color: var(--primary-gold);
+}
+
+.service-item-title {
+  color: var(--text-main);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.service-item-text {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
+.skills-item-box {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Skill item layout */
+.skills-item {
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Skill icon */
+.skills-item img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Scrollbar styling */
+.skills-item-box::-webkit-scrollbar {
+  height: 6px;
+}
+
+.skills-item-box::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 10px;
+}
+
+.skills-item-box::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.skills-item-box::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}

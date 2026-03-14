@@ -1,0 +1,89 @@
+.mapbox {
+  margin-bottom: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.google-map {
+  filter: grayscale(1) invert(1) contrast(0.8) opacity(0.8); /* Dark mode map trick! */
+  border: none;
+}
+
+.form-title {
+  color: var(--text-main);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-input {
+  color: var(--text-main);
+  background: var(--bg-container-light);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 15px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-input:focus {
+  border-color: var(--primary-gold);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 150px;
+  margin-bottom: 15px;
+}
+
+.form-btn {
+  background: var(--bg-container-light);
+  color: var(--primary-gold);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: auto;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+.form-btn:hover {
+  background: var(--bg-container);
+  border-color: var(--primary-gold);
+}
+
+@media (max-width: 768px) {
+  .input-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-btn {
+    width: 100%;
+  }
+}

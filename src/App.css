@@ -1,0 +1,102 @@
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: 100vh;
+}
+
+/* Sidebar styling overrides */
+.sidebar {
+  flex: 0 0 280px;
+  background-color: var(--bg-container);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  position: sticky;
+  top: 60px;
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  min-width: 0; /* Prevents overflow in flex child */
+  background-color: var(--bg-container);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+
+/* Navigation bar styling */
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(43, 43, 44, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  padding: 20px 40px;
+  display: flex;
+  gap: 30px;
+  box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.navbar a {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 15px;
+  transition: color var(--transition);
+}
+
+.navbar a:hover, .navbar a.active {
+  color: var(--primary-gold);
+}
+
+.page-content {
+  padding: 30px;
+  margin-top: 60px; /* Space for the navbar */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    flex: none;
+    padding: 20px;
+  }
+
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 15px 20px;
+    background-color: rgba(43, 43, 44, 0.9);
+  }
+
+  .main-content {
+    width: 100%;
+    margin-bottom: 80px; /* Space for bottom navbar */
+  }
+
+  .page-content {
+    margin-top: 0;
+  }
+}
