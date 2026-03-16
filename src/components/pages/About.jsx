@@ -11,7 +11,7 @@ const About = () => {
 
       <section className="about-text">
         <p>
-          I'm <b>Pranav Kumar</b>, a passionate Software Developer based in
+          I'm <b>Raja Kumar</b>, a passionate Software Developer based in
           Patna, Bihar, India. I specialize in building scalable mobile
           applications, modern web platforms, and{" "}
           <b>cross-platform solutions</b>.

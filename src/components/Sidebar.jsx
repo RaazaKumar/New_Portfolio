@@ -7,12 +7,12 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="/assets/profile_avatar.png" alt="Pranav Kumar" width="80" />
+          <img src="dist/assets/profile_avatar.png " alt="Raja Kumar" width="80" />
         </figure>
 
         <div className="info-content">
-          <h1 className="name" title="Pranav Kumar">
-            Pranav Kumar
+          <h1 className="name" title="Raja Kumar">
+            Raja Kumar
           </h1>
           <p className="title">Mobile App Developer</p>
         </div>
@@ -29,8 +29,8 @@ const Sidebar = () => {
 
             <div className="contact-info">
               <p className="contact-title">EMAIL</p>
-              <a href="mailto:pranavmandal213@gmail.com" className="contact-link">
-                pranavmandal213@gmail.com
+              <a href="mailto:rajakumar.develop@gmail.com" className="contact-link">
+                rajakumar.develop@gmail.com
               </a>
             </div>
           </li>
@@ -42,7 +42,7 @@ const Sidebar = () => {
 
             <div className="contact-info">
               <p className="contact-title">PHONE</p>
-              <a href="tel:+917488610183" className="contact-link">
+              <a href="tel:+916205705816" className="contact-link">
                 +91 74886 10183
               </a>
             </div>
