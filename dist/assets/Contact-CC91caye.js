@@ -1,0 +1,10 @@
+import{c as h,r,j as e}from"./index-CE05Ud_I.js";/**
+ * @license lucide-react v0.365.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const g=h("Send",[["path",{d:"m22 2-7 20-4-9-9-4Z",key:"1q3vgg"}],["path",{d:"M22 2 11 13",key:"nzbqef"}]]),j=()=>{const[a,n]=r.useState({fullname:"",email:"",subject:"",message:""}),[l,m]=r.useState(!1),s=t=>{n({...a,[t.target.name]:t.target.value})},o=t=>{t.preventDefault(),m(!0);const{fullname:c,email:i,subject:u,message:d}=a,p=`mailto:pranavkumarcodequery@gmail.com?subject=${encodeURIComponent(u)}&body=${encodeURIComponent(`Name: ${c}
+Email: ${i}
+
+Message:
+${d}`)}`;window.location.href=p,setTimeout(()=>{m(!1),n({fullname:"",email:"",subject:"",message:""})},1e3)};return e.jsxs("article",{className:"article contact fade-in",children:[e.jsx("header",{children:e.jsx("h2",{className:"article-title",children:"Contact"})}),e.jsx("section",{className:"mapbox",children:e.jsx("figure",{children:e.jsx("iframe",{src:"https://www.google.com/maps?q=Patna,Bihar&output=embed",width:"100%",height:"350",loading:"lazy",title:"Map of Patna",className:"google-map"})})}),e.jsxs("section",{className:"contact-form",children:[e.jsx("h3",{className:"form-title",children:"Get in Touch"}),e.jsxs("form",{className:"form",onSubmit:o,children:[e.jsxs("div",{className:"input-wrapper",children:[e.jsx("input",{type:"text",name:"fullname",className:"form-input",placeholder:"Full name",value:a.fullname,onChange:s,required:!0}),e.jsx("input",{type:"email",name:"email",className:"form-input",placeholder:"Email address",value:a.email,onChange:s,required:!0})]}),e.jsx("input",{type:"text",name:"subject",className:"form-input",placeholder:"Subject",value:a.subject,onChange:s,required:!0}),e.jsx("textarea",{name:"message",className:"form-input",placeholder:"Your Message",rows:"5",value:a.message,onChange:s,required:!0}),e.jsxs("button",{className:"form-btn",type:"submit",disabled:l,children:[e.jsx(g,{size:18}),e.jsx("span",{children:l?"Sending...":"Send Message"})]})]})]})]})};export{j as default};

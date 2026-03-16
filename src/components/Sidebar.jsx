@@ -1,19 +1,57 @@
 import React from "react";
-import { Mail, Phone, MapPin, Github, Linkedin,X } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import "./Sidebar.css";
+
+const contacts = [
+  {
+    icon: <Mail size={18} />,
+    title: "EMAIL",
+    value: "rajakumar.develop@gmail.com",
+    link: "mailto:rajakumar.develop@gmail.com",
+  },
+  {
+    icon: <Phone size={18} />,
+    title: "PHONE",
+    value: "+91 62057 05816",
+    link: "tel:+917488610183",
+  },
+  {
+    icon: <MapPin size={18} />,
+    title: "LOCATION",
+    value: "Patna, Bihar, India",
+  },
+];
+
+const socials = [
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/",
+    icon: "/assets/socials/linkedin.svg",
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/",
+    icon: "/assets/socials/github.svg",
+  },
+  {
+    name: "X",
+    link: "https://x.com/",
+    icon: "/assets/socials/x.svg",
+  },
+];
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
+      {/* Profile */}
+
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="dist/assets/profile_avatar.png " alt="Raja Kumar" width="80" />
+          <img src="src\assets\raaza.jpg" alt="Raja Kumar" width="80" />
         </figure>
 
         <div className="info-content">
-          <h1 className="name" title="Raja Kumar">
-            Raja Kumar
-          </h1>
+          <h1 className="name">Raja Kumar</h1>
           <p className="title">Mobile App Developer</p>
         </div>
       </div>
@@ -21,101 +59,46 @@ const Sidebar = () => {
       <div className="sidebar-info_more">
         <div className="separator"></div>
 
+        {/* Contact List */}
+
         <ul className="contacts-list">
-          <li className="contact-item">
-            <div className="icon-box">
-              <Mail size={18} />
-            </div>
+          {contacts.map((contact, index) => (
+            <li className="contact-item" key={index}>
+              <div className="icon-box">{contact.icon}</div>
 
-            <div className="contact-info">
-              <p className="contact-title">EMAIL</p>
-              <a href="mailto:rajakumar.develop@gmail.com" className="contact-link">
-                rajakumar.develop@gmail.com
-              </a>
-            </div>
-          </li>
+              <div className="contact-info">
+                <p className="contact-title">{contact.title}</p>
 
-          <li className="contact-item">
-            <div className="icon-box">
-              <Phone size={18} />
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">PHONE</p>
-              <a href="tel:+916205705816" className="contact-link">
-                +91 74886 10183
-              </a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <MapPin size={18} />
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">LOCATION</p>
-              <address>Patna, Bihar, India</address>
-            </div>
-          </li>
+                {contact.link ? (
+                  <a href={contact.link} className="contact-link">
+                    {contact.value}
+                  </a>
+                ) : (
+                  <address>{contact.value}</address>
+                )}
+              </div>
+            </li>
+          ))}
         </ul>
 
         <div className="separator"></div>
 
+        {/* Social Links */}
+
         <ul className="social-list">
-          <li className="social-item">
-            <a
-              href="https://www.linkedin.com/in/pranav-kumar-3930b9256/"
-              className="social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              {/* <Linkedin size={20} />   */}
-              <img
-                src="/assets/socials/linkedin.svg"
-                alt="LinkedIn"
-                width={25}
-                height={25}
-              />
-            </a>
-          </li>
-
-          <li className="social-item">
-            <a
-              href="https://github.com/pranavK911"
-              className="social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              {/* <Github size={20} /> */}
-              <img
-                src="/assets/socials/github.svg"
-                alt="GitHub"
-                width={25}
-                height={25}
-              />
-            </a>
-          </li>
-
-          <li className="social-item">
-            <a
-              href="https://x.com/pranavK911"
-              className="social-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X (Twitter)"
-            >
-              {/* <X size={20} /> */}
-              <img
-                src="/assets/socials/x.svg"
-                alt="X (Twitter)"
-                width={25}
-                height={25}
-              />
-            </a>
-          </li>
+          {socials.map((social) => (
+            <li className="social-item" key={social.name}>
+              <a
+                href={social.link}
+                className="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+              >
+                <img src={social.icon} alt={social.name} width={24} height={24} />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </aside>

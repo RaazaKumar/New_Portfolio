@@ -1,4 +1,3 @@
-/* Base Page Styles */
 .article {
   animation: fadeIn 0.5s ease forwards;
 }
@@ -8,39 +7,39 @@
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   position: relative;
 }
 
-/* Magic underline for titles */
 .article-title::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
-  height: 5px;
+  width: 50px;
+  height: 4px;
   background: var(--primary-gold);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .about-text {
   color: var(--text-muted);
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 15px;
 }
 
-/* Services Section */
+/* SERVICES */
+
 .service {
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .service-title {
   color: var(--text-main);
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .service-list {
@@ -52,105 +51,89 @@
 .service-item {
   background: var(--bg-container-light);
   border-radius: 14px;
-  padding: 30px;
+  padding: 25px;
   display: flex;
-  align-items: flex-start;
   gap: 18px;
-  box-shadow: var(--box-shadow);
   border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .service-icon-box {
-  margin-top: 5px;
   color: var(--primary-gold);
 }
 
 .service-item-title {
   color: var(--text-main);
   font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .service-item-text {
   color: var(--text-muted);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .service-list {
-    grid-template-columns: 1fr;
-  }
-}
+/* SKILLS */
 
 .skills-section {
   margin-top: 40px;
 }
 
-/* Scroll container */
+.skills-title {
+  color: var(--text-main);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
 .skills-container {
   overflow-x: auto;
-  padding: 25px 0;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-
-  /* snap scrolling */
-  scroll-snap-type: x mandatory;
+  padding: 20px 0;
 }
 
-/* Skill row */
 .skills-track {
   display: flex;
-  gap: 40px;
-  padding: 0 20px;
+  gap: 25px;
+  padding: 0 10px;
 }
 
-/* Each icon */
 .skill {
-  min-width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* snap alignment */
-  scroll-snap-align: center;
+  min-width: 140px;
+  background: var(--bg-container-light);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
-/* Icon style */
-@keyframes zoomInOut {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .skill img {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 10px;
 }
 
-.skill img:hover {
-  animation: zoomInOut 4s infinite ease-in-out;
+.skill span {
+  display: block;
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 500;
 }
-/* Scrollbar styling */
+
+/* Scrollbar */
+
 .skills-container::-webkit-scrollbar {
   height: 6px;
-}
-
-.skills-container::-webkit-scrollbar-track {
-  background: #2a2a2a;
-  border-radius: 10px;
 }
 
 .skills-container::-webkit-scrollbar-thumb {
@@ -158,6 +141,20 @@
   border-radius: 10px;
 }
 
-.skills-container::-webkit-scrollbar-thumb:hover {
-  background: #ffd86f;
+.skills-container::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skill {
+    min-width: 120px;
+  }
+
 }

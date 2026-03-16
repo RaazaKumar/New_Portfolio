@@ -1,5 +1,5 @@
 .timeline {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .title-wrapper {
@@ -15,10 +15,11 @@
   font-weight: 600;
 }
 
-/* Timeline List */
+/* Timeline */
+
 .timeline-list {
   font-size: 15px;
-  margin-left: 24px; /* Align with icon center */
+  margin-left: 24px;
   padding-left: 30px;
   border-left: 1px solid var(--border-color);
   position: relative;
@@ -26,19 +27,20 @@
 
 .timeline-item {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .timeline-item:last-child {
   margin-bottom: 0;
 }
 
-/* The dot marker */
+/* Marker */
+
 .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 6px;
-  left: -37px; /* Align dot on the border */
+  left: -37px;
   width: 14px;
   height: 14px;
   background: var(--primary-gold);
@@ -64,4 +66,18 @@
   font-weight: 300;
   line-height: 1.6;
   margin-top: 10px;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+  .timeline-list {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -27px;
+  }
+
 }

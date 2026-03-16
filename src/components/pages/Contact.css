@@ -1,14 +1,19 @@
+/* MAP */
+
 .mapbox {
   margin-bottom: 40px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
 }
 
 .google-map {
-  filter: grayscale(1) invert(1) contrast(0.8) opacity(0.8); /* Dark mode map trick! */
+  filter: grayscale(1) invert(1) contrast(0.8) opacity(0.85);
   border: none;
 }
+
+/* FORM TITLE */
 
 .form-title {
   color: var(--text-main);
@@ -17,11 +22,15 @@
   margin-bottom: 25px;
 }
 
+/* FORM LAYOUT */
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
+/* INPUT GRID */
 
 .input-wrapper {
   display: grid;
@@ -29,17 +38,18 @@
   gap: 20px;
 }
 
+/* INPUT STYLE */
+
 .form-input {
   color: var(--text-main);
   background: var(--bg-container-light);
   font-family: inherit;
   font-size: 15px;
-  font-weight: 400;
   padding: 15px 20px;
   border: 1px solid var(--border-color);
   border-radius: 14px;
   outline: none;
-  transition: var(--transition);
+  transition: all 0.25s ease;
 }
 
 .form-input::placeholder {
@@ -48,42 +58,61 @@
 
 .form-input:focus {
   border-color: var(--primary-gold);
+  box-shadow: 0 0 0 2px rgba(246, 211, 101, 0.15);
 }
+
+/* TEXTAREA */
 
 textarea.form-input {
   resize: vertical;
   min-height: 150px;
-  margin-bottom: 15px;
 }
+
+/* BUTTON */
 
 .form-btn {
   background: var(--bg-container-light);
   color: var(--primary-gold);
   border: 1px solid var(--border-color);
   border-radius: 14px;
-  padding: 16px 20px;
+  padding: 16px 22px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+
   font-size: 16px;
   font-weight: 500;
+
   margin-left: auto;
-  transition: var(--transition);
+
+  transition: all 0.25s ease;
+
   box-shadow: var(--box-shadow);
 }
 
 .form-btn:hover {
   background: var(--bg-container);
   border-color: var(--primary-gold);
+  transform: translateY(-2px);
 }
 
+.form-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+
 @media (max-width: 768px) {
+
   .input-wrapper {
     grid-template-columns: 1fr;
   }
-  
+
   .form-btn {
     width: 100%;
   }
+
 }

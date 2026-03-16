@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Briefcase } from "lucide-react";
+import { BookOpen, Briefcase, Code } from "lucide-react";
 import "./Pages.css";
 import "./Resume.css";
 
@@ -21,30 +21,44 @@ const Resume = () => {
         </div>
 
         <ol className="timeline-list">
+
           <li className="timeline-item">
             <h4 className="timeline-item-title">
               Bachelor of Computer Applications (BCA)
             </h4>
-            <span>2021 — 2024</span>
+            <span>2022 — 2025</span>
             <p className="timeline-text">
-              Studied computer science fundamentals including programming,
-              database systems, web technologies and software engineering.
+              Catalyst Institute of Management and Advance Global Excellence
+              (CIMAGE), Patna. Studied programming, database systems, web
+              technologies and software engineering.
             </p>
           </li>
 
           <li className="timeline-item">
-            <h4 className="timeline-item-title">Intermediate (Science)</h4>
-            <span>2018 — 2020</span>
+            <h4 className="timeline-item-title">
+              Intermediate (Science - PCM)
+            </h4>
+            <span>2021 — 2022</span>
             <p className="timeline-text">
-              Completed higher secondary education with focus on mathematics.
+              D.B.R.K Jalan School (BSEB), Patna. Focused on Physics,
+              Chemistry and Mathematics.
             </p>
           </li>
+
+          <li className="timeline-item">
+            <h4 className="timeline-item-title">Matriculation (CBSE)</h4>
+            <span>2019 — 2020</span>
+            <p className="timeline-text">
+              Kiddy Convent High School, Patna.
+            </p>
+          </li>
+
         </ol>
       </div>
 
       {/* Experience */}
 
-      {/* <div className="timeline">
+      <div className="timeline">
         <div className="title-wrapper">
           <div className="icon-box">
             <Briefcase size={20} />
@@ -53,39 +67,59 @@ const Resume = () => {
         </div>
 
         <ol className="timeline-list">
+
           <li className="timeline-item">
             <h4 className="timeline-item-title">
-              React Native Developer (Freelance)
+              React Native App Developer Intern
             </h4>
-            <span>2023 — Present</span>
+            <span>Jan 2026 — Apr 2026</span>
             <p className="timeline-text">
-              Developing cross-platform mobile applications using React Native.
-              Worked on multiple apps including service booking platforms and
-              vehicle service applications with Firebase backend.
+              CodeQuery – Patna. Developed and maintained cross-platform
+              mobile applications using React Native. Integrated REST APIs,
+              implemented UI components, optimized performance and handled
+              Android app builds, keystore signing and Google Play Console
+              releases.
             </p>
           </li>
 
-          <li className="timeline-item">
-            <h4 className="timeline-item-title">Full Stack Developer</h4>
-            <span>2022 — 2023</span>
-            <p className="timeline-text">
-              Built web applications using React.js and Node.js. Integrated REST
-              APIs, authentication systems, and Firebase services for scalable
-              backend solutions.
-            </p>
-          </li>
-
-          <li className="timeline-item">
-            <h4 className="timeline-item-title">Mobile App Publishing</h4>
-            <span>2023 — Present</span>
-            <p className="timeline-text">
-              Experience publishing and managing applications on Google Play
-              Store and Apple App Store including app optimization, store
-              listing, screenshots, and metadata.
-            </p>
-          </li>
         </ol>
-      </div> */}
+      </div>
+
+      {/* Projects */}
+
+      <div className="timeline">
+        <div className="title-wrapper">
+          <div className="icon-box">
+            <Code size={20} />
+          </div>
+          <h3 className="timeline-title">Projects</h3>
+        </div>
+
+        <ol className="timeline-list">
+
+          <li className="timeline-item">
+            <h4 className="timeline-item-title">Coffee Shop Mobile App</h4>
+            <span>React Native</span>
+            <p className="timeline-text">
+              Built a mobile ordering app with product listing, categories,
+              cart management, wishlist functionality and order summary using
+              React Native, TypeScript, Zustand and Axios.
+            </p>
+          </li>
+
+          <li className="timeline-item">
+            <h4 className="timeline-item-title">Service Booking Apps</h4>
+            <span>React Native</span>
+            <p className="timeline-text">
+              Worked on multiple production applications including Global Pet
+              Grooming, Sahil Services, CleanOzoom, Service Book Karo, Ventigo
+              Partner App and AC Expert App during internship.
+            </p>
+          </li>
+
+        </ol>
+      </div>
+
     </article>
   );
 };
